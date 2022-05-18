@@ -10,7 +10,7 @@ Restaurant.destroy_all
 
 puts "Creating Restaurants..."
 5.times do
-  restaurant =  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, stars: rand(1..5))
+  restaurant =  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: Restaurant::CATEGORIES.sample, phone_number: Faker::PhoneNumber.phone_number)
   puts "#{restaurant.name} created"
 end
 
